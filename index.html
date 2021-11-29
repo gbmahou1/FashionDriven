@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload="receiveName()">
 
 
       <header class="topBar">
@@ -24,75 +24,123 @@
 
         <div class="buildSection">
 
-            <section style="margin-top: 21px;">
+            <section style="margin-top: 10px;">
                 <p>Escolha o Modelo</p>
             </section>
 
             <section>
-                <div style="margin-left: 0px;" class="imageSection">
-                    
-                        <img src="Images/tshirt.png">
-                    
-                        <p>T-Shirt</p>
-                   
-                   
                 
-                    
+                <div>
+                    <div id="t-shirt" onclick="clickModelo(this)" class="imageSection">
+                        <img src="Images/tshirt.png">
+                    </div>
+                    <div>
+                        <p>T-Shirt</p>
+                    </div>
                 </div>
-                <div class="imageSection">
-                    <img src="Images/Camiseta.png">
-                    <p>Camiseta</p>
+                
+                <div>
+                    <div id="top-tank" onclick="clickModelo(this)" class="imageSection">
+                        <img src="Images/Camiseta.png">
+                    </div>
+                    <div>
+                        <p>Camiseta</p>
+                    </div>
                 </div>
-                <div class="imageSection">
-                    <img src="Images/Mangalonga.png">
-                    <p>Manga Longa</p>
+                
+                <div>
+                    <div id="long" onclick="clickModelo(this)" class="imageSection">
+                        <img src="Images/Mangalonga.png">
+                    </div>
+                    <div>
+                        <p>Manga Longa</p>
+                    </div>
                 </div>
+                
             </section>
 
-            <section style="margin-top: 45px;">
+            <section>
                 <p>Escolha a Gola</p>
             </section>
 
             <section>
-                <div style="margin-left: 0px;" class="imageSection">
-                    <img src="Images/GolaV.png">
-                    <p>Gola V</p>
+                
+                <div>
+                    <div id="v-neck" onclick="clickGola(this)" class="imageSection">
+                        <img src="Images/GolaV.png">
+                    </div>
+                    <div>
+                        <p>Gola V</p>
+                    </div>
                 </div>
-                <div class="imageSection">
-                    <img src="Images/GolaRedonda.png">
-                    <p>Gola Redonda</p>
+                
+                <div>
+                    <div id="round" onclick="clickGola(this)" class="imageSection">
+                        <img src="Images/GolaRedonda.png">
+                    </div>
+                    <div>
+                        <p>Gola Redonda</p>
+                    </div>
                 </div>
-                <div class="imageSection">
-                    <img src="Images/GolaPolo.png">
-                    <p>Gola Polo</p>
+                
+                <div>
+                    <div id="polo" onclick="clickGola(this)" class="imageSection">
+                        <img src="Images/GolaPolo.png">
+                    </div>
+                    <div>
+                        <p>Gola Polo</p>
+                    </div>
                 </div>
+                
             </section>
 
-            <section style="margin-top: 45px;">
+            <section>
                 <p>Escolha o Tecido</p>
             </section>
 
             <section>
-                <div style="margin-left: 0px;" class="imageSection">
-                    <img src="Images/Seda.png">
-                    <p>Seda</p>
+                
+                <div>
+                    <div id="silk" onclick="clickTecido(this)" class="imageSection">
+                        <img src="Images/Seda.png">
+                    </div>
+                    <div>
+                        <p>Seda</p>
+                    </div>
                 </div>
-                <div class="imageSection">
-                    <img src="Images/Algodão.png">
-                    <p>Algodão</p>
+                
+                <div>
+                    <div id="cotton" onclick="clickTecido(this)" class="imageSection">
+                        <img src="Images/Algodão.png">
+                    </div>
+                    <div>
+                        <p>Algodão</p>
+                    </div>
                 </div>
-                <div class="imageSection">
-                    <img src="Images/Poliester.png">
-                    <p>Poliéster</p>
+                
+                <div>
+                    <div id="polyester" onclick="clickTecido(this)" class="imageSection">
+                        <img src="Images/Poliester.png">
+                    </div>
+                    <div>
+                        <p>Poliéster</p>
+                    </div>
                 </div>
+                
             </section>
 
-            <section style="margin-top: 45px;">
+            <section >
                 <p>Imagem de Referência</p>
             </section>
 
-            
+            <section>
+                <input type="text" id="linkInsert" onchange="getLink()" class="linkBar" placeholder="Insira o Link"></input>
+            </section>
 
+            <section id="confirmButton" class="confirmButton" style="margin-left: 130px;">
+                <p style="text-align: center; width: 100%; margin-left: 0; font-style: bold; font-size: 21px; color: white; margin-top: 13px;">Confirmar Pedido</p>
+            </section>
+        
         </div>
 
         <div class="rightSection">
@@ -105,9 +153,17 @@
 
       <div class="bottomSection">
 
+        
+        <p style="margin-left: 130px; margin-top: 40px; font-style: bold; font-size: 25px; font-family: 'Roboto', sans-serif;">Ultimos Pedidos</p>
+        
+
+        <div id="recentRequests" class="requestsDisplay">
+
+        </div>
+
       </div>
     
-
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="scripts.js"></script>
   </body>
 </html>

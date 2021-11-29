@@ -27,12 +27,12 @@
 
 .buildSection section
 {
-    padding-left: 125px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 21px;
     display: flex;
     flex: wrap;
+    margin-left: 80px;
 }
 
 .buildSection section p
@@ -41,6 +41,7 @@
     line-height: 18px;
     font-size: 16px;
     display: block;
+    margin-left: 50px;
 }
 
 
@@ -58,6 +59,11 @@
 {
     margin-left: auto;
     object-fit: contain;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 .rightSection
@@ -74,8 +80,67 @@
     position: absolute;
     top: 874px;
     left: 0;
+
+}
+
+.confirmButton
+{
+    width: 405px; 
+    height: 45px; 
+    background-color: #C4C4C4;  
+    margin-top: 10px; 
+    border-radius: 10px; 
+    align-content: center;
+}
+
+.linkBar
+{
+    margin-left: 50px; 
+    width: 380px; height: 40px; 
+    border-radius: 20px; 
+    border-style: none; 
+    padding-left: 20px;
+}
+
+.selected{
+    border: 3px solid #404EED;
+}
+
+.active{
+    background-color: #404EED;
+}
+
+.requestsDisplay
+{
+    height: 240px;
+    width: 80%;
+    margin-left: 130px;
     display: flex;
-    flex: wrap;
-    background-color: red;
-    
+    flex-wrap: wrap;
+}
+
+.request
+{
+    height: 240px;
+    width: 200px;
+    margin-bottom: 30px;
+    margin-right: 27px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.request img
+{
+    height: 180px;
+    width: 180px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.request p
+{
+    margin-top: 20px;
+    margin-left: 10px;
 }
